@@ -1,4 +1,5 @@
 <?php
+if (isset($_POST['send'])) {
 // Check for empty fields
 if (empty($_POST['name']) ||
     empty($_POST['email']) ||
@@ -23,4 +24,4 @@ $headers = "From: dlovan.tallat@yahoo.com\n"; // This is the email address the g
 $headers .= "Reply-To: $email_address";
 mail($to, $email_subject, $email_body, $headers);
 return true;
-?>
+}
